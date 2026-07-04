@@ -1,88 +1,59 @@
 /* ============================================
-   KGTV Theme for Jellyfin
+   KGTV Logo for Jellyfin
+   Add this on top of any theme (e.g., Abyss)
    ============================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
 
 /* ============================================
-   HEADER LOGO - KGTV Replacement
+   HEADER LOGO - KGTV
    ============================================ */
 
-/* Hide the original Jellyfin logo image */
-.headerLogo img,
-.headerLogo .headerLogoImage,
-.headerLogo .logoImage {
+/* Hide the default Jellyfin logo */
+.pageTitle.pageTitleWithLogo.pageTitleWithDefaultLogo {
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
-    width: 0 !important;
-    height: 0 !important;
 }
 
-/* Style the logo link container */
-.headerLogo,
-a.headerLogo,
-.emby-button.headerLogo {
-    font-family: 'Bungee Spice', cursive !important;
-    font-size: 26px !important;
-    letter-spacing: 3px !important;
-    color: #E50914 !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    width: auto !important;
-    min-width: 80px !important;
-    height: 40px !important;
-    overflow: visible !important;
+#tvRecommendedPage .pageTitle,
+#moviesPage .pageTitle,
+#musicRecommendedPage .pageTitle,
+#itemDetailPage .pageTitle {
+    display: none !important;
 }
 
-/* Inject KGTV text using ::before */
-.headerLogo::before,
-a.headerLogo::before,
-.emby-button.headerLogo::before {
+/* Inject KGTV in header */
+.headerLeft::before {
     content: "KGTV" !important;
     font-family: 'Bungee Spice', cursive !important;
     font-size: 26px !important;
     letter-spacing: 3px !important;
     color: #E50914 !important;
+    margin-right: 16px !important;
     display: inline-block !important;
+    line-height: 1 !important;
 }
 
 /* ============================================
-   LOGIN PAGE LOGO
+   LOGIN PAGE LOGO - KGTV
    ============================================ */
 
-#loginPage .imgLogo,
-#loginPage .logoImage,
-#loginPage .headerLogo img {
+#loginPage h1 {
     display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
 }
 
-#loginPage .imgLogo,
-#loginPage .headerLogo {
+#loginPage .readOnlyContent::before {
+    content: "KGTV" !important;
     font-family: 'Bungee Spice', cursive !important;
     font-size: 48px !important;
     letter-spacing: 4px !important;
     color: #E50914 !important;
-    text-align: center !important;
     display: block !important;
+    text-align: center !important;
     margin-bottom: 20px !important;
 }
 
-#loginPage .imgLogo::before,
-#loginPage .headerLogo::before {
-    content: "KGTV" !important;
-    font-family: 'Bungee Spice', cursive !important;
-    font-size: 48px !important;
-    letter-spacing: 4px !important;
-    color: #E50914 !important;
-    display: block !important;
-}
-
 /* ============================================
-   SPLASH SCREEN LOGO
+   SPLASH SCREEN - KGTV
    ============================================ */
 
 .splashLogo {
